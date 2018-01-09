@@ -1,0 +1,151 @@
+
+@font-face {
+  font-family: 'PizzaSlime';
+  src: url('../fonts/SkidooMedium_RH.ttf')
+}
+
+html {
+  height: 100vh;
+  width: 100vw
+}
+
+body {
+  height: 100;
+  width: 100;
+  background-image: url('./shack.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  font-family: 'PizzaSlime';
+  color: #2bff14;
+  overflow-y: hidden;
+}
+
+main {
+  flex: 1
+}
+
+audio {
+  width: 100%;
+  height: 50px;
+  margin-top: 2%;
+  margin-bottom; 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0
+}
+
+.btns {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*margin-bottom: 2%;*/
+  margin-left: auto;
+  margin-right: auto
+}
+
+.header {
+  font-size: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center
+}
+
+
+#next {
+  font-size: 38px;
+  padding-bottom: 5px
+}
+
+.btns h1:hover {
+  cursor: pointer
+}
+
+.content {
+  position: absolute;
+  width: 60%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column
+}
+
+.nowPlaying {
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 18px
+}
+
+.own {
+  width: 60%;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: 'PizzaSlime';
+  color: #2bff14;
+  background-color: black
+}
+
+.or {
+  margin-left: auto;
+  margin-right: auto
+}
+
+.dropDown {
+  width: 40%;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: 'PizzaSlime';
+  color: #2bff14;
+  background-color: black;
+  margin-top: 1%;
+}
+
+.genre {
+  width: 40%;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: 'PizzaSlime';
+  color: #2bff14;
+  background-color: black;
+  margin-top: 1%;
+}
+
+option {
+  font-family: 'PizzaSlime';
+  color: #2bff14
+}
+
+@media only screen and (max-width: 1200px)  {
+  .content {
+    width: 100%
+  }
+  .header {
+    font-size: 28px;
+  }
+  .nowPlaying {
+    margin-top: none;
+  }
+  main {
+    overflow-y: scroll
+  }
+}

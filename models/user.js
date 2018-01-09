@@ -1,5 +1,22 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
+var Schema = mongoose.Schema
+var Fave = require('./fave')
+
+// var FaveSchema = mongoose.Schema({
+// 	artist: {
+// 		type: String
+// 	},
+// 	title: {
+// 		type: String
+// 	},
+// 	album: {
+// 		type: String
+// 	},
+// 	url: {
+// 		type: String
+// 	}
+// })
 
 // User Schema
 var UserSchema = mongoose.Schema({
@@ -15,10 +32,13 @@ var UserSchema = mongoose.Schema({
 	},
 	name: {
 		type: String
-	}
+	},
+	faves: [Fave.schema]
 });
 
-var User = module.exports = mongoose.model('User', UserSchema);
+// var Fave = mongoose.model('Fave', FaveSchema)
+var User = module.exports = mongoose.model('User', UserSchema)
+
 
 module.exports.createUser = function(newUser, callback){
 	bcrypt.genSalt(10, function(err, salt) {
