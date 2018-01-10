@@ -38,18 +38,24 @@ audio {
   right: 0
 }
 
+h1 {
+  font-size: 40px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+
 .btns {
-  width: 20%;
+  width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  /*margin-bottom: 2%;*/
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  margin-bottom: 2%;
+  text-align: center
 }
 
 .header {
@@ -64,12 +70,78 @@ audio {
 
 #next {
   font-size: 38px;
-  padding-bottom: 5px
+  padding-bottom: 5px;
+  float: left;
+  padding: 10px 10px;
+  border-radius: 4px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+
+#fave {
+  font-size: 38px;
+  padding-bottom: 5px;
+  float: right;
+  padding: 10px 10px;
+  border-radius: 4px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+
+#fave:hover, #next:hover {
+  color: #e330ff;
+  background-color: rgba(255, 255, 255, 0.6)
+}
+
+#welcome {
+  color: #e330ff;
+  border-radius: 4px;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.fave {
+  border: 1px solid black
 }
 
 .btns h1:hover {
   cursor: pointer
 }
+
+#login {
+  width: 40%;
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.hello {
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+
+
+.form-control {
+  background-color: black;
+  color: white;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.logbtn:hover {
+  color: white
+}
+
+.form-control::placeholder {
+  color: #2bff14
+}
+
+
 
 .content {
   position: absolute;
@@ -83,11 +155,15 @@ audio {
 }
 
 .nowPlaying {
-  margin-top: 5%;
+  margin-top: 3%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  font-size: 18px
+}
+
+.nowPlaying h2 {
+  font-size: 18px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
 }
 
 .own {
@@ -101,13 +177,20 @@ audio {
   background-color: black
 }
 
+.navitem {
+  color: #2bff14;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+
 .or {
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  font-size: 24px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
 }
 
 .dropDown {
-  width: 40%;
+  width: 35%;
   font-size: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -119,7 +202,7 @@ audio {
 }
 
 .genre {
-  width: 40%;
+  width: 35%;
   font-size: 20px;
   margin-left: auto;
   margin-right: auto;

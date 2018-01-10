@@ -14,7 +14,6 @@ router.put('/', function(req, res){
 		if (err) {
 			console.log(err)
 		} else {
-			console.log(req.body)
 			var artist = req.body.artist
 			var title = req.body.song
 			var album = req.body.album
@@ -25,56 +24,24 @@ router.put('/', function(req, res){
 				album: album,
 				url: url
 			})
-			console.log(newFave)
 			user.faves.push(newFave)
-			user.save()
+			user.save(function(err){
+				if (!err) {
+					console.log('success')
+				}
+			})
 		}
 	})
 })
 
 router.get('/faves', function(req, res){
-	User.find({email: req.user.email}, function(err, user){
+	User.findOne({email: req.user.email}, function(err, user){
 		if (err) {
 			console.log(err)
 		} else {
-			console.log(user[0].faves.id('5a54756240e6ec07693ce161').artist)
-				}
-			})
-			// console.log(user.faves.id(ObjectId("5a546dd0318007060a5d6486")))
-		// }
-	// 	console.log(user.faves.id('5a5469c90bbe5e0526b4d204'))
-	// User.find({_id: req.user._id}).exec(function(err, faves){
-	// 	if(err){
-	// 		console.log(err)
-	// 	} else {
-	// 		console.log(faves)
-	// 	}
-	// })
-
-	// console.log(req)
-	// User.findOne({_id: req.user._id})
-	// .populate('faves')
-	// .exec(function(err, user){
-	// 	if (err) {
-	// 		console.log(err)
-	// 	} else {
-	// 		console.log(user)
-	// 	}
-	// })
-	// res.render('faves',
-	// 	{
-	// 		faves: req.user.faves
-	// 	}
-
-	// User.findOne({_id: req.user._id}, function(err, user){
-	// 	if (err) {
-	// 		console.log(err)
-	// 	} else {
-	// 		faves: user.faves
-	// 	}
-	// })
-	// )
-	// })
+			res.render('faves', { faves: user.faves, user: user })
+		}
+	})
 })
 
 function ensureAuthenticated(req, res, next){

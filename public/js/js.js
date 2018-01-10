@@ -1,17 +1,6 @@
 
 $( document ).ready(function(){
 
-  var song = {
-    artist: 'yea yea',
-    title: 'good songs',
-    album: 'greatest hits',
-    url: 'google.com'
-  }
-
-// })
-
-
-// $(document).ready(function(){
   var artists = ["Keller Williams", "Yonder Mountain String Band", "Robert Randolph", "Grateful Dead", "David Grisman", "Bob Weir", "Justin Townes Earle", "JJ Grey", "Alabama Shakes"]
   var options = artists.map(function(artist){
     return `<option value=${artist.split(' ').join('+')}>${artist}</option>`
@@ -240,7 +229,10 @@ $( document ).ready(function(){
           $.ajax({
             url: '/',
             type: 'PUT',
-            data: JSON.stringify(selectedSong),
+            data: selectedSong,
+            error: function(err) {
+              console.log(err)
+            },
             success: console.log('yep')
           })
         })

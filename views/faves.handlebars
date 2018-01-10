@@ -1,7 +1,17 @@
-these are your faves
-
+<div class="faves">
 {{#if faves}}
+<h3>These are {{user.usernames}}'s faves</h3>
       {{#each faves}}
-        <div>{{this}}</div>
+      <div class="fave">
+        <p>{{this.artist}}</p>
+        <p>{{this.title}}</p>
+        <p>{{this.album}}</p>
+      </div>
       {{/each}}
 {{/if}}
+</div>
+<div id="nowStreaming">
+</div>
+<audio controls autoplay="autoplay">
+  <source src=""></source>
+</audio>
