@@ -147,6 +147,17 @@ $( document ).ready(function(){
         if (!selectedSong.artist && !selectedSong.song && !selectedSong.album){
           $('.nowPlaying').append(`<h2>NO SONG INFO AVAILABLE</h2>`)
         }
+        $('.click').on('click', function(){
+          $.ajax({
+            url: '/',
+            type: 'PUT',
+            data: selectedSong,
+            error: function(err) {
+              console.log(err)
+            },
+            success: console.log('yep')
+          })
+        })
       })
     })
   }
