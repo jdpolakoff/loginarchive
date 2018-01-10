@@ -46,6 +46,11 @@ $( document ).ready(function(){
       }
   })
 
+  $('#faveAudio').on('ended', function(){
+    $('.faveDrop').val('Scroll through')
+    $('#faveAudio').pause()
+  })
+
   $('audio').on('ended', function(){
     $('.nowPlaying').empty()
     if ($('.dropDown').val() !== 'Choose An Artist'){
