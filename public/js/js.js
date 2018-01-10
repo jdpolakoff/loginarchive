@@ -31,6 +31,12 @@ $( document ).ready(function(){
     getFesty()
   })
 
+  $('.faveDrop').on('change', function(){
+    $('.nowStreaming').empty()
+    $('#faveAudio').attr('src', $('.faveDrop').val())
+    $('.nowStreaming').append(`<p class="playingNow">Now playing:<br>${$('.faveDrop option:selected').text()}</p>`)
+  })
+
   $('#next').click(function(){
     $('.nowPlaying').empty()
       if ($('.dropDown').val() !== 'Choose An Artist'){

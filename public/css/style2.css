@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   font-family: 'PizzaSlime';
   color: #2bff14;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 main {
@@ -56,6 +56,23 @@ h1 {
   margin-right: auto;
   margin-bottom: 2%;
   text-align: center
+}
+
+.nowStreaming {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4%;
+  max-width: 500px;
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+
+.nowStreaming p {
+  font-size: 24px
 }
 
 .header {
@@ -100,8 +117,12 @@ h1 {
   box-sizing: border-box;
 }
 
-.fave {
-  border: 1px solid black
+.myname {
+  margin-top: 1%;
+  font-size: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
 }
 
 .btns h1:hover {
@@ -199,6 +220,18 @@ h1 {
   color: #2bff14;
   background-color: black;
   margin-top: 1%;
+}
+
+.faveDrop {
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: 'PizzaSlime';
+  color: #2bff14;
+  background-color: black;
+  margin-top: 1%;
+  max-width: 500px;
 }
 
 .genre {

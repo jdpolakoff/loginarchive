@@ -1,17 +1,15 @@
-<div class="faves">
-{{#if faves}}
-<h3>These are {{user.usernames}}'s faves</h3>
-      {{#each faves}}
-      <div class="fave">
-        <p>{{this.artist}}</p>
-        <p>{{this.title}}</p>
-        <p>{{this.album}}</p>
-      </div>
-      {{/each}}
-{{/if}}
-</div>
-<div id="nowStreaming">
-</div>
-<audio controls autoplay="autoplay">
+
+  <h3 class="myname">{{user.username}}'s faves:</h3>
+    {{#if faves}}
+    <select class="faveDrop">
+          <option>Scroll through</option>
+          {{#each faves}}
+            <option class="optz" value={{this.url}}>{{this.artist}} | {{this.title}} | {{this.album}}</option>
+          {{/each}}
+    </select>
+    {{/if}}
+  <div class="nowStreaming">
+  </div>
+<audio id="faveAudio" controls>
   <source src=""></source>
 </audio>
