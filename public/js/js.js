@@ -133,6 +133,7 @@ $( document ).ready(function(){
         console.log(metadata)
         var selectedSong = metadata[Math.floor(Math.random() * metadata.length)]
         console.log(selectedSong)
+        $('#fave').text('FAVE IT')
         $('audio').attr('src', selectedSong.url)
         $('.nowPlaying').append(`<h2>Now playing: ${$('.dropDown').val().split('+').join(' ')} radio</h2>`)
         if (selectedSong.artist) {
@@ -155,7 +156,7 @@ $( document ).ready(function(){
             error: function(err) {
               console.log(err)
             },
-            success: console.log('yep')
+            success: $('#fave').text('FAVED')
           })
         })
       })
@@ -233,6 +234,7 @@ $( document ).ready(function(){
         console.log(metadata)
         var selectedSong = metadata[Math.floor(Math.random() * metadata.length)]
         console.log(selectedSong)
+        $('#fave').text('FAVE IT')
         $('audio').attr('src', selectedSong.url)
         $('.nowPlaying').append(`<h2>Now playing: ${$('.genre').val().split('+').join(' ')} radio</h2>`)
         if (selectedSong.artist) {
@@ -255,7 +257,7 @@ $( document ).ready(function(){
             error: function(err) {
               console.log(err)
             },
-            success: console.log('yep')
+            success: $('#fave').text('FAVED')
           })
         })
       })

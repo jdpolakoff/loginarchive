@@ -11,10 +11,14 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
+//PRODUCTION DB
+
 var db = `mongodb://${process.env.DB_USER}:${process.env.DB_PW}@ds249757.mlab.com:49757/${process.env.DB_NAME}`;
 mongoose.connect(db, {
   useMongoClient: true
 })
+
+//DEV DB
 // 
 // mongoose.connect('mongodb://localhost/loginapp');
 // var db = mongoose.connection;
