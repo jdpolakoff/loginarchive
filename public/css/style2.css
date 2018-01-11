@@ -20,6 +20,7 @@ body {
   flex-direction: column;
   font-family: 'PizzaSlime';
   color: #2bff14;
+  zoom: 110%
   /* overflow-y: hidden; */
 }
 
