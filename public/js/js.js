@@ -148,7 +148,7 @@ $( document ).ready(function(){
         if (!selectedSong.artist && !selectedSong.song && !selectedSong.album){
           $('.nowPlaying').append(`<h2>NO SONG INFO AVAILABLE</h2>`)
         }
-        $('.click').on('click', function(){
+        $('#fave').on('click', function(){
           $.ajax({
             url: '/',
             type: 'PUT',
@@ -249,7 +249,7 @@ $( document ).ready(function(){
         if (!selectedSong.artist && !selectedSong.song && !selectedSong.album){
           $('.nowPlaying').append(`<h2>NO SONG INFO AVAILABLE</h2>`)
         }
-        $('.click').on('click', function(){
+        $('#fave').on('click', function(){
           $.ajax({
             url: '/',
             type: 'PUT',
